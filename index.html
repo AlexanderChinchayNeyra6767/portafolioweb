@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi portafolio</title>
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Encabezado: foto junto al nombre -->
+    <table width="100%" cellpadding="10">
+        <tr>
+            <td width="150">
+                <!-- Aquí va la foto -->
+                <img src="https://th.bing.com/th/id/OIP.tM_PEs5TH3iFXdwXTJR0BgHaE7?r=0&o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3" alt="foto" width="150" height="150">
+            </td>
+            <td>
+                <h1>Alexander chinchay neyra</h1>
+                <p>"Todo se puede con esfuerzo"</p>
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- Sección: Sobre mí -->
+    <h2>Sobre mí</h2>
+    <div class="sobre-mi-texto">
+        <p>Nuevas experiencias vendrán, oportunidades para aprender y ser mejor.</p>
+        <p>Me llamo Alexander Chinchay Neyra, vivo en San Juan de Marcona.</p>
+        <p>Me apasiona la repostería, caminar y aprender nuevas tecnologías.</p>
+        <p>Puedes contactarme a alexanderchinnchayvic@email.com.</p>
+    </div>
+
+    <!-- Botón CV corregido: sin <td> suelto y ruta ajustada -->
+    <div style="margin-top: 10px;">
+        <a href="documents/cv2.pdf" target="_blank" class="btn-cv">Mi CV</a>
+    </div>
+    
+    <hr>
+
+    <!-- Sección: Habilidades - tres tarjetas -->
+    <h2>Habilidades</h2>
+
+    <table width="100%" cellpadding="10">
+        <tr>
+            <td width="33%" valign="top" bgcolor="#f0f0f0">
+                <h3>Aprendiz de programacion</h3>
+                <p>Con un nivel bajo pero lo suficiente para entender y buscar una solucion</p>
+            </td>
+            <td width="33%" valign="top" bgcolor="#f0f0f0">
+                <h3>Entendido de ofimatica</h3>
+                <p>Mi habilidad con programas como Excel, Word, Powerpoint y otros programas relacionados es de buen nivel</p>
+            </td>
+            <td width="33%" valign="top" bgcolor="#f0f0f0">
+                <h3>Nivel intermedio en programas de diseño</h3>
+                <p>tengo una habilidad intermedio en programas como Ilustrator, Coreldrawn y Photoshop</p>
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- Sección: Proyectos -->
+    <h2>Proyectos</h2>
+
+    <ul>
+        <li>
+            <a href="https://www.figma.com/proto/TV3HG0a7SLAJapThKIhM2S/Grupo2---Portafolio?node-id=1-754&p=f&t=n3InnEEGcG33a8VN-0&scaling=min-zoom&content-scaling=fixed&page-id=1%3A4&starting-point-node-id=1%3A754" target="_blank">
+                <strong>Portafolio Northstar</strong><br>
+                Portafolio del grupo Northstar.
+            </a>
+        </li>
+        <li>
+            <a href="https://www.figma.com/proto/eY7J1Yh2pb48iUdUj3UPqP/Proyecto1_LandingPage---NOTA---20--?node-id=7-147&p=f&t=n3InnEEGcG33a8VN-0&scaling=min-zoom&content-scaling=fixed&page-id=7%3A54" target="_blank">
+                <strong>Landingpage Techsolutions SAC</strong><br>
+                Página principal de la empresa Techsolutions.
+            </a>
+        </li>
+        <li>
+            <a href="https://www.figma.com/proto/Akpg0NtLcFWzbZRqTAT4Ix/Grupo2-NORTHSTAR---NoticiasWeb?node-id=27-9&p=f&t=n3InnEEGcG33a8VN-0&scaling=min-zoom&content-scaling=fixed&page-id=12%3A3&starting-point-node-id=27%3A9" target="_blank">
+                <strong>Página web de noticias</strong><br>
+                Pagina web de noticias de la localidad de Marcona.
+            </a>
+        </li>
+    </ul>
+
+    <hr>
+
+    <!-- Sección: Mensaje / Formulario de contacto -->
+    <h2>Déjame un mensaje</h2>
+
+    <form action="#" method="post">
+        <table cellpadding="5">
+            <tr>
+                <td><label for="nombre">Nombre:</label></td>
+                <td><input type="text" id="nombre" name="nombre" size="30"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Correo electrónico:</label></td>
+                <td><input type="email" id="email" name="email" size="30"></td>
+            </tr>
+            <tr>
+                <td valign="top"><label for="mensaje">Mensaje:</label></td>
+                <td><textarea id="mensaje" name="mensaje" rows="5" cols="40"></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Contactame"></td>
+            </tr>
+        </table>
+    </form>
+
+    <hr>
+
+    <!-- Pie de página opcional -->
+    <footer>
+        <p>© 2026 - marca personal</p>
+    </footer>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
