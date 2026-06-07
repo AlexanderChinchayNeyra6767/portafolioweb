@@ -1,0 +1,423 @@
+/* =============================================
+   PORTAFOLIO RETRO 2004 - WEB ANTICUADA
+   Estilo Windows 98 / geocities
+   Autor: CalamarinoElegante
+   ============================================= */
+
+/* Recursos y variables */
+:root {
+    --fondo-pagina: #c0c0c0;        
+    --fondo-tablas: #d4d0c8;        
+    --fondo-habilidades: #e0e0e0;   
+    --fondo-inputs: #ffffff;        
+    --fondo-listas: #e0e0e0;        
+    --fondo-proyectos: #d4d0c8;     
+    --fondo-item-proyecto: #ffffff; 
+    --borde-outset: #ffffff;        
+    --borde-inset: #808080;         
+    --borde-oscuro: #000000;        
+    --texto-titulo: #000080;        
+    --texto-normal: #000000;        
+    --texto-link: #0000ff;          
+    --texto-link-hover: #ff0000;    
+    --hover-input: #ffffcc;          
+    --hover-link-bg: #ffff00;        
+    --fuente-general: 'Times New Roman', Times, serif;
+    --fuente-titulos: 'Arial', 'Helvetica', sans-serif;
+    --fuente-mono: 'Courier New', Courier, monospace;
+}
+
+/* Reset y fondo */
+body {
+    background: var(--fondo-pagina);
+    font-family: var(--fuente-general);
+    font-size: 14px;
+    color: var(--texto-normal);
+    margin: 20px;
+    padding: 0;
+}
+
+/* Textura de puntos (opcional) */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#a0a0a0 1px, transparent 1px);
+    background-size: 20px 20px;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+/* Botones unificados (CV y formulario) */
+.btn-cv,
+input[type="submit"] {
+    background: var(--fondo-tablas);
+    border: 2px outset var(--borde-outset);
+    font-family: var(--fuente-titulos);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 12px;
+    cursor: pointer;
+    color: var(--texto-normal);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-cv:active,
+input[type="submit"]:active {
+    border: 2px inset var(--borde-outset);
+    background: #b0a890;
+}
+
+.btn-cv:hover,
+input[type="submit"]:hover {
+    background: #d0c8b0;
+    color: var(--texto-link-hover);
+}
+
+/* Enlaces */
+a {
+    color: var(--texto-link);
+    text-decoration: underline;
+}
+
+a:hover {
+    color: var(--texto-link-hover);
+    text-decoration: none;
+    background: var(--hover-link-bg);
+}
+
+/* Tablas y celdas */
+table {
+    background: var(--fondo-tablas);
+    border-collapse: collapse;
+    border: 2px outset var(--borde-outset);
+    width: 100%;
+}
+
+td {
+    border: 1px inset var(--borde-inset);
+    padding: 8px;
+}
+
+body > table {
+    background: var(--fondo-tablas);
+    border: 2px outset var(--borde-outset);
+}
+
+td[bgcolor="#f0f0f0"] {
+    background: var(--fondo-habilidades);
+}
+
+/* Tipografía y títulos */
+h1 {
+    font-family: var(--fuente-titulos);
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--texto-titulo);
+    margin: 10px 0;
+    text-shadow: 1px 1px 0px var(--fondo-pagina);
+}
+
+h2 {
+    font-family: var(--fuente-titulos);
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--texto-normal);
+    background: var(--fondo-tablas);
+    border-top: 2px ridge var(--borde-outset);
+    border-left: 2px ridge var(--borde-outset);
+    border-bottom: 2px ridge var(--borde-inset);
+    border-right: 2px ridge var(--borde-inset);
+    padding: 5px 10px;
+    display: inline-block;
+    margin: 20px 0 15px 0;
+}
+
+h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--texto-titulo);
+    margin: 5px 0;
+    border-bottom: 1px dotted var(--borde-inset);
+}
+
+p {
+    line-height: 1.4;
+}
+
+/* Líneas horizontales */
+hr {
+    height: 2px;
+    background: var(--borde-inset);
+    border: none;
+    border-top: 2px ridge var(--borde-outset);
+    border-bottom: 2px ridge var(--borde-oscuro);
+    margin: 20px 0;
+}
+
+/* Formulario*/
+input, textarea {
+    background: var(--fondo-inputs);
+    border: 2px inset var(--borde-inset);
+    font-family: var(--fuente-mono);
+    font-size: 12px;
+    padding: 3px;
+}
+
+input:focus, textarea:focus {
+    background: var(--hover-input);
+    border: 2px inset var(--borde-oscuro);
+}
+
+/* Listas generales */
+ul:not(h2 + ul) {
+    background: var(--fondo-listas);
+    border: 1px solid var(--borde-inset);
+    padding: 15px 15px 15px 35px;
+    margin: 10px 0;
+    list-style-type: square;
+}
+
+li {
+    margin: 8px 0;
+}
+
+/* Imágenes */
+img {
+    border: 2px ridge var(--borde-inset);
+    background: var(--fondo-inputs);
+    padding: 2px;
+}
+
+/* Pie de página */
+footer {
+    background: var(--fondo-tablas);
+    border-top: 2px ridge var(--borde-outset);
+    border-bottom: 2px ridge var(--borde-inset);
+    padding: 10px;
+    text-align: center;
+    font-size: 11px;
+    font-family: var(--fuente-titulos);
+    color: var(--texto-normal);
+    margin-top: 30px;
+}
+
+small, .footer-note {
+    font-family: var(--fuente-titulos);
+    font-size: 10px;
+}
+
+/* Proyectos */
+h2 + ul {
+    background: var(--fondo-proyectos);
+    border: 2px inset var(--borde-outset);
+    padding: 12px;
+    list-style: none;
+    margin-top: 0;
+}
+
+h2 + ul li {
+    background: var(--fondo-item-proyecto);
+    border: 2px inset var(--borde-inset);
+    margin: 10px 0;
+    padding: 10px 12px;
+    font-family: var(--fuente-mono);
+    font-size: 13px;
+    color: var(--texto-normal);
+}
+
+h2 + ul li strong {
+    font-family: var(--fuente-titulos);
+    font-size: 15px;
+    color: var(--texto-titulo);
+    display: block;
+    margin-bottom: 5px;
+    border-left: 3px solid var(--borde-inset);
+    padding-left: 8px;
+}
+
+h2 + ul li:hover {
+    background: var(--hover-input);
+    border-color: var(--borde-oscuro);
+}
+
+/* Ajustes adicionales */
+td[bgcolor="#f0f0f0"], td[bgcolor="#e0e0e0"] {
+    background: var(--fondo-habilidades);
+}
+
+table table {
+    background: var(--fondo-tablas);
+}
+
+hr + * {
+    animation: none;
+}
+
+/* Responsive: Tablets horizontal (menos de 1024px) */
+@media (max-width: 1024px) {
+    body {
+        margin: 15px;
+    }
+    body > table,
+    body > table tbody,
+    body > table tr {
+        display: block;
+        width: 100%;
+    }
+    body > table td {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    img {
+        width: 130px;
+        height: 130px;
+        margin: 0 auto;
+        display: block;
+    }
+    h1 { font-size: 26px; }
+    h2 { font-size: 22px; }
+}
+
+/* Responsive: Tablets vertical y móviles grandes (menos de 768px) */
+@media (max-width: 768px) {
+    body {
+        margin: 10px;
+    }
+    table, tbody, tr, td {
+        display: block;
+        width: 100%;
+    }
+    td {
+        margin-bottom: 12px;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+    td[bgcolor="#f0f0f0"] {
+        background: var(--fondo-habilidades);
+    }
+    img {
+        width: 100px;
+        height: 100px;
+    }
+    h1 { font-size: 22px; }
+    h2 { font-size: 20px; }
+    h3 { font-size: 18px; }
+    input, textarea, input[type="submit"] {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    h2 + ul li {
+        margin: 15px 0;
+    }
+    footer {
+        font-size: 10px;
+        padding: 8px;
+    }
+}
+
+/* Responsive: Móviles pequeños (menos de 480px) */
+@media (max-width: 480px) {
+    body {
+        margin: 5px;
+    }
+    td {
+        padding: 6px;
+        margin-bottom: 10px;
+    }
+    h1 { font-size: 18px; }
+    h2 { font-size: 18px; }
+    h3 { font-size: 16px; }
+    img {
+        width: 80px;
+        height: 80px;
+    }
+    p {
+        font-size: 12px;
+    }
+    input, textarea, input[type="submit"] {
+        font-size: 12px;
+    }
+    footer {
+        font-size: 9px;
+    }
+}
+
+/* Ventanas emergentes estilo Windows XP */
+.windows-xp-notify {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    background: #ece9d8;
+    border: 2px solid;
+    border-top-color: #ffffff;
+    border-left-color: #ffffff;
+    border-right-color: #808080;
+    border-bottom-color: #808080;
+    font-family: 'Segoe UI', Tahoma, 'Arial', sans-serif;
+    font-size: 12px;
+    z-index: 1000;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.notify-title {
+    background: #0a246a;
+    color: white;
+    padding: 4px 8px;
+    font-weight: bold;
+    cursor: move;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+
+.notify-close {
+    background: #ece9d8;
+    border: 1px solid #808080;
+    color: black;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    line-height: 16px;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: monospace;
+}
+
+.notify-close:hover {
+    background: #c0c0c0;
+}
+
+.notify-content {
+    padding: 12px 16px;
+    color: black;
+    background: #ece9d8;
+}
+
+.notify-ok {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.notify-ok button {
+    background: #ece9d8;
+    border: 1px solid #003399;
+    padding: 2px 12px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.notify-ok button:hover {
+    background: #c0c0c0;
+}
